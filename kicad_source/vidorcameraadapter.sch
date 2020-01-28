@@ -1,0 +1,538 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L mechanical-connectors:CONN_02X26 CN1
+U 1 1 5E2F7F0A
+P 3550 5450
+F 0 "CN1" H 3550 6915 50  0000 C CNN
+F 1 "CONN_02X26" H 3550 6824 50  0000 C CNN
+F 2 "connectors_pci-express:MPCIe_4mm" H 3550 4750 50  0001 C CNN
+F 3 "" H 3550 4750 50  0000 C CNN
+	1    3550 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power-supply:GND #PWR0101
+U 1 1 5E2FA375
+P 3900 6800
+F 0 "#PWR0101" H 3900 6550 50  0001 C CNN
+F 1 "GND" H 3905 6627 50  0000 C CNN
+F 2 "" H 3900 6800 50  0000 C CNN
+F 3 "" H 3900 6800 50  0000 C CNN
+	1    3900 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power-supply:+3V3 #PWR0102
+U 1 1 5E2FB01A
+P 4000 4100
+F 0 "#PWR0102" H 4000 3950 50  0001 C CNN
+F 1 "+3V3" H 4015 4273 50  0000 C CNN
+F 2 "" H 4000 4100 50  0000 C CNN
+F 3 "" H 4000 4100 50  0000 C CNN
+	1    4000 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 6700 4000 6700
+Wire Wire Line
+	4000 6700 4000 5300
+Wire Wire Line
+	3800 4200 4000 4200
+Connection ~ 4000 4200
+Wire Wire Line
+	4000 4200 4000 4100
+Wire Wire Line
+	3800 5300 4000 5300
+Connection ~ 4000 5300
+Wire Wire Line
+	4000 5300 4000 4200
+$Comp
+L power-supply:+3V3 #PWR0103
+U 1 1 5E2FF5C3
+P 3100 4100
+F 0 "#PWR0103" H 3100 3950 50  0001 C CNN
+F 1 "+3V3" H 3115 4273 50  0000 C CNN
+F 2 "" H 3100 4100 50  0000 C CNN
+F 3 "" H 3100 4100 50  0000 C CNN
+	1    3100 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power-supply:GND #PWR0104
+U 1 1 5E301440
+P 3200 6800
+F 0 "#PWR0104" H 3200 6550 50  0001 C CNN
+F 1 "GND" H 3205 6627 50  0000 C CNN
+F 2 "" H 3200 6800 50  0000 C CNN
+F 3 "" H 3200 6800 50  0000 C CNN
+	1    3200 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 6200 3100 6200
+Wire Wire Line
+	3100 6200 3100 6100
+Wire Wire Line
+	3300 6100 3100 6100
+Connection ~ 3100 6100
+Wire Wire Line
+	3100 6100 3100 4100
+Wire Wire Line
+	3800 4300 3900 4300
+Wire Wire Line
+	3900 4300 3900 5000
+Wire Wire Line
+	3800 5000 3900 5000
+Connection ~ 3900 5000
+Wire Wire Line
+	3900 5000 3900 5400
+Wire Wire Line
+	3800 5400 3900 5400
+Connection ~ 3900 5400
+Wire Wire Line
+	3900 5400 3900 5800
+Wire Wire Line
+	3800 5800 3900 5800
+Connection ~ 3900 5800
+Wire Wire Line
+	3900 5800 3900 6100
+Wire Wire Line
+	3800 6100 3900 6100
+Connection ~ 3900 6100
+Wire Wire Line
+	3900 6100 3900 6600
+Wire Wire Line
+	3800 6600 3900 6600
+Connection ~ 3900 6600
+Wire Wire Line
+	3900 6600 3900 6800
+Wire Wire Line
+	3300 4600 3200 4600
+Wire Wire Line
+	3200 4600 3200 4900
+Wire Wire Line
+	3300 4900 3200 4900
+Connection ~ 3200 4900
+Wire Wire Line
+	3200 4900 3200 5200
+Wire Wire Line
+	3300 5200 3200 5200
+Connection ~ 3200 5200
+Wire Wire Line
+	3200 5200 3200 5500
+Wire Wire Line
+	3300 5500 3200 5500
+Connection ~ 3200 5500
+Wire Wire Line
+	3200 5500 3200 5600
+Wire Wire Line
+	3300 5600 3200 5600
+Connection ~ 3200 5600
+Wire Wire Line
+	3200 5600 3200 5900
+Wire Wire Line
+	3300 5900 3200 5900
+Connection ~ 3200 5900
+Wire Wire Line
+	3200 5900 3200 6000
+Wire Wire Line
+	3300 6000 3200 6000
+Connection ~ 3200 6000
+Wire Wire Line
+	3200 6000 3200 6300
+Wire Wire Line
+	3300 6300 3200 6300
+Connection ~ 3200 6300
+Wire Wire Line
+	3200 6300 3200 6800
+Wire Wire Line
+	4500 5900 3800 5900
+Wire Wire Line
+	4500 6000 3800 6000
+Text Label 4100 5900 0    50   ~ 0
+USB_DM
+Text Label 4100 6000 0    50   ~ 0
+USB_DP
+NoConn ~ 4500 5900
+NoConn ~ 4500 6000
+$Comp
+L mechanical-connectors:CONN_02X10 CN2
+U 1 1 5E31184F
+P 8050 3450
+F 0 "CN2" H 8050 4115 50  0000 C CNN
+F 1 "CONN_02X10" H 8050 4024 50  0000 C CNN
+F 2 "pin_headers:Pin_Header_Straight_2x10" H 8050 4023 50  0001 C CNN
+F 3 "" H 8050 2250 50  0000 C CNN
+	1    8050 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power-supply:+3V3 #PWR0105
+U 1 1 5E3130E9
+P 7700 2900
+F 0 "#PWR0105" H 7700 2750 50  0001 C CNN
+F 1 "+3V3" H 7715 3073 50  0000 C CNN
+F 2 "" H 7700 2900 50  0000 C CNN
+F 3 "" H 7700 2900 50  0000 C CNN
+	1    7700 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power-supply:GND #PWR0106
+U 1 1 5E314FAB
+P 8400 4000
+F 0 "#PWR0106" H 8400 3750 50  0001 C CNN
+F 1 "GND" H 8405 3827 50  0000 C CNN
+F 2 "" H 8400 4000 50  0000 C CNN
+F 3 "" H 8400 4000 50  0000 C CNN
+	1    8400 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 3000 8400 3000
+Wire Wire Line
+	8400 3000 8400 4000
+Wire Wire Line
+	7800 3000 7700 3000
+Wire Wire Line
+	7700 3000 7700 2900
+Wire Wire Line
+	7150 3100 7800 3100
+Wire Wire Line
+	7150 3200 7800 3200
+Wire Wire Line
+	7150 3300 7800 3300
+Wire Wire Line
+	7150 3400 7800 3400
+Wire Wire Line
+	7150 3500 7800 3500
+Wire Wire Line
+	7150 3600 7800 3600
+Wire Wire Line
+	7150 3700 7800 3700
+Wire Wire Line
+	7150 3800 7800 3800
+Wire Wire Line
+	7150 3900 7800 3900
+Wire Wire Line
+	9200 3100 8300 3100
+Wire Wire Line
+	9200 3200 8300 3200
+Wire Wire Line
+	9200 3300 8300 3300
+Wire Wire Line
+	9200 3400 8300 3400
+Wire Wire Line
+	9200 3500 8300 3500
+Wire Wire Line
+	9200 3600 8300 3600
+Wire Wire Line
+	9200 3700 8300 3700
+Wire Wire Line
+	9200 3800 8300 3800
+Wire Wire Line
+	9200 3900 8300 3900
+Text Label 7250 3100 0    50   ~ 0
+SCL
+Text Label 8600 3100 0    50   ~ 0
+SDA
+Text Label 7250 3200 0    50   ~ 0
+VSYNC
+Text Label 8600 3200 0    50   ~ 0
+HREF
+Text Label 7250 3300 0    50   ~ 0
+PCLK
+Text Label 8600 3300 0    50   ~ 0
+XCLK
+Text Label 7250 3900 0    50   ~ 0
+RST
+Text Label 8600 3900 0    50   ~ 0
+PWDN
+Text Label 7250 3400 0    50   ~ 0
+DOUT9
+Text Label 8600 3400 0    50   ~ 0
+DOUT8
+Text Label 7250 3500 0    50   ~ 0
+DOUT7
+Text Label 8600 3500 0    50   ~ 0
+DOUT6
+Text Label 7250 3600 0    50   ~ 0
+DOUT5
+Text Label 8600 3600 0    50   ~ 0
+DOUT4
+Text Label 7250 3700 0    50   ~ 0
+DOUT3
+Text Label 8600 3700 0    50   ~ 0
+DOUT2
+Text Label 7250 3800 0    50   ~ 0
+DOUT1
+Text Label 8600 3800 0    50   ~ 0
+DOUT0
+Text Label 5550 6750 0    50   ~ 0
+SCL
+Text Label 4200 5100 0    50   ~ 0
+VSYNC
+Text Label 2550 5300 0    50   ~ 0
+PCLK
+Text Label 4200 5600 0    50   ~ 0
+RST
+Text Label 2550 5700 0    50   ~ 0
+DOUT9
+Text Label 4200 6200 0    50   ~ 0
+DOUT7
+Text Label 4200 6300 0    50   ~ 0
+DOUT5
+Text Label 4200 6400 0    50   ~ 0
+DOUT3
+Text Label 4200 6500 0    50   ~ 0
+DOUT1
+Wire Wire Line
+	6150 6650 5250 6650
+Wire Wire Line
+	6150 6750 5250 6750
+Text Label 5550 6650 0    50   ~ 0
+SDA
+Text Label 4200 5500 0    50   ~ 0
+HREF
+Text Label 2550 5400 0    50   ~ 0
+XCLK
+Text Label 4200 5700 0    50   ~ 0
+PWDN
+Text Label 2550 5800 0    50   ~ 0
+DOUT8
+Text Label 2550 6400 0    50   ~ 0
+DOUT6
+Text Label 2550 6500 0    50   ~ 0
+DOUT4
+Text Label 2550 6600 0    50   ~ 0
+DOUT2
+Text Label 2550 6700 0    50   ~ 0
+DOUT0
+Wire Wire Line
+	2450 6700 3300 6700
+Wire Wire Line
+	2450 6600 3300 6600
+Wire Wire Line
+	2450 6500 3300 6500
+Wire Wire Line
+	2450 6400 3300 6400
+Wire Wire Line
+	4750 6500 3800 6500
+Wire Wire Line
+	4750 6400 3800 6400
+Wire Wire Line
+	4750 6300 3800 6300
+Wire Wire Line
+	4750 6200 3800 6200
+Wire Wire Line
+	2450 5800 3300 5800
+Wire Wire Line
+	2450 5700 3300 5700
+Wire Wire Line
+	4750 5100 3800 5100
+Wire Wire Line
+	4750 5500 3800 5500
+Wire Wire Line
+	4500 5200 3800 5200
+Wire Wire Line
+	2450 5300 3300 5300
+Wire Wire Line
+	2450 5400 3300 5400
+Text Label 4100 5200 0    50   ~ 0
+PEX_RST
+Wire Wire Line
+	4750 5700 3800 5700
+Wire Wire Line
+	4750 5600 3800 5600
+Text Notes 4700 5850 0    50   ~ 0
+Pin 30 and 32 have pull up on Vidor 4000
+NoConn ~ 4500 5200
+Wire Wire Line
+	2650 4200 3300 4200
+Wire Wire Line
+	2650 4300 3300 4300
+Wire Wire Line
+	2650 4400 3300 4400
+Wire Wire Line
+	2650 4500 3300 4500
+Wire Wire Line
+	2650 4700 3300 4700
+Wire Wire Line
+	2650 4800 3300 4800
+Wire Wire Line
+	2650 5000 3300 5000
+Wire Wire Line
+	2650 5100 3300 5100
+Wire Wire Line
+	4500 4900 3800 4900
+Wire Wire Line
+	4500 4800 3800 4800
+Wire Wire Line
+	4500 4700 3800 4700
+Wire Wire Line
+	4500 4600 3800 4600
+Wire Wire Line
+	4500 4500 3800 4500
+Wire Wire Line
+	4500 4400 3800 4400
+Text Label 2750 4200 0    50   ~ 0
+RSVD0
+Text Label 2750 4300 0    50   ~ 0
+RSVD1
+Text Label 2750 4400 0    50   ~ 0
+RSVD2
+Text Label 4100 4400 0    50   ~ 0
+RSVD3
+Text Label 2750 4500 0    50   ~ 0
+RSVD4
+Text Label 4100 4500 0    50   ~ 0
+RSVD5
+Text Label 4100 4600 0    50   ~ 0
+RSVD6
+Text Label 2750 4700 0    50   ~ 0
+RSVD7
+Text Label 4100 4700 0    50   ~ 0
+RSVD8
+Text Label 2750 4800 0    50   ~ 0
+RSVD9
+Text Label 4100 4800 0    50   ~ 0
+RSVD10
+Text Label 4100 4900 0    50   ~ 0
+RSVD11
+Text Label 2750 5000 0    50   ~ 0
+RSVD12
+Text Label 2750 5100 0    50   ~ 0
+RSVD13
+NoConn ~ 4500 4400
+NoConn ~ 4500 4500
+NoConn ~ 4500 4600
+NoConn ~ 4500 4700
+NoConn ~ 4500 4800
+NoConn ~ 4500 4900
+NoConn ~ 2650 4200
+NoConn ~ 2650 4300
+NoConn ~ 2650 4400
+NoConn ~ 2650 4500
+NoConn ~ 2650 4700
+NoConn ~ 2650 4800
+NoConn ~ 2650 5000
+NoConn ~ 2650 5100
+$Comp
+L MECH_smd-spacer:WA-SMSI_9774010243 MECH1
+U 1 1 5E3027E6
+P 1000 4300
+F 0 "MECH1" H 1128 4346 50  0000 L CNN
+F 1 "WA-SMSI_9774010243" H 1128 4255 50  0000 L CNN
+F 2 "MECH_smd-spacer:WA-SMSI_9774010243" H 900 4350 50  0001 C CNN
+F 3 "" H 1000 4300 50  0001 C CNN
+	1    1000 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L MECH_smd-spacer:WA-SMSI_9774010243 MECH2
+U 1 1 5E305119
+P 1000 4600
+F 0 "MECH2" H 1128 4646 50  0000 L CNN
+F 1 "WA-SMSI_9774010243" H 1128 4555 50  0000 L CNN
+F 2 "MECH_smd-spacer:WA-SMSI_9774010243" H 900 4650 50  0001 C CNN
+F 3 "" H 1000 4600 50  0001 C CNN
+	1    1000 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L MECH_smd-spacer:WA-SMSI_9774010243 MECH3
+U 1 1 5E305ACD
+P 10200 3150
+F 0 "MECH3" H 10328 3196 50  0000 L CNN
+F 1 "WA-SMSI_9774010243" H 10328 3105 50  0000 L CNN
+F 2 "MECH_smd-spacer:WA-SMSI_9774010243" H 10100 3200 50  0001 C CNN
+F 3 "" H 10200 3150 50  0001 C CNN
+	1    10200 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L MECH_smd-spacer:WA-SMSI_9774010243 MECH4
+U 1 1 5E306838
+P 10200 3400
+F 0 "MECH4" H 10328 3446 50  0000 L CNN
+F 1 "WA-SMSI_9774010243" H 10328 3355 50  0000 L CNN
+F 2 "MECH_smd-spacer:WA-SMSI_9774010243" H 10100 3450 50  0001 C CNN
+F 3 "" H 10200 3400 50  0001 C CNN
+	1    10200 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L MECH_smd-spacer:WA-SMSI_9774010243 MECH5
+U 1 1 5E306BE3
+P 10200 3650
+F 0 "MECH5" H 10328 3696 50  0000 L CNN
+F 1 "WA-SMSI_9774010243" H 10328 3605 50  0000 L CNN
+F 2 "MECH_smd-spacer:WA-SMSI_9774010243" H 10100 3700 50  0001 C CNN
+F 3 "" H 10200 3650 50  0001 C CNN
+	1    10200 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L MECH_smd-spacer:WA-SMSI_9774010243 MECH6
+U 1 1 5E306DF6
+P 10200 3900
+F 0 "MECH6" H 10328 3946 50  0000 L CNN
+F 1 "WA-SMSI_9774010243" H 10328 3855 50  0000 L CNN
+F 2 "MECH_smd-spacer:WA-SMSI_9774010243" H 10100 3950 50  0001 C CNN
+F 3 "" H 10200 3900 50  0001 C CNN
+	1    10200 3900
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9900 3150
+NoConn ~ 9900 3400
+NoConn ~ 9900 3650
+NoConn ~ 9900 3900
+NoConn ~ 700  4300
+NoConn ~ 700  4600
+Text Notes 650  4100 0    50   ~ 0
+mounting spacers for Vidor 4000
+Text Notes 9550 2950 0    50   ~ 0
+mounting spacers for camera module
+$Comp
+L mechanical-connectors:CONN_01X03 CN3
+U 1 1 5E324687
+P 6350 6750
+F 0 "CN3" H 6428 6791 50  0000 L CNN
+F 1 "CONN_01X03" H 6428 6700 50  0000 L CNN
+F 2 "pin_headers:Pin_Header_Straight_1x03" H 6350 6750 50  0001 C CNN
+F 3 "" H 6350 6750 50  0000 C CNN
+	1    6350 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power-supply:GND #PWR01
+U 1 1 5E324D2E
+P 6050 6950
+F 0 "#PWR01" H 6050 6700 50  0001 C CNN
+F 1 "GND" H 6055 6777 50  0000 C CNN
+F 2 "" H 6050 6950 50  0000 C CNN
+F 3 "" H 6050 6950 50  0000 C CNN
+	1    6050 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 6850 6050 6850
+Wire Wire Line
+	6050 6850 6050 6950
+Text Notes 5200 6550 0    50   ~ 0
+I2C is not on the Mini PCIe connecter\nso it has to come from somewhere else
+$EndSCHEMATC
