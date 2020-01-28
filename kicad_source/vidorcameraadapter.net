@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/bernhard/projects/VidorCameraAdapter/kicad_source/vidorcameraadapter.sch)
-    (date "Di 28 Jan 2020 22:48:44 CET")
+    (date "Di 28 Jan 2020 23:21:03 CET")
     (tool "Eeschema 5.1.5-52549c5~84~ubuntu18.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -23,7 +23,7 @@
       (tstamp 5E2F7F0A))
     (comp (ref CN2)
       (value CONN_02X10)
-      (footprint pin_headers:Pin_Header_Straight_2x10)
+      (footprint CON_wuerth:WR-PHD_61302021821)
       (libsource (lib mechanical-connectors) (part CONN_02X10) (description "Connector 02x10"))
       (sheetpath (names /) (tstamps /))
       (tstamp 5E31184F))
