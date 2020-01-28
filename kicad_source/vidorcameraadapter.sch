@@ -167,8 +167,6 @@ Text Label 4100 5900 0    50   ~ 0
 USB_DM
 Text Label 4100 6000 0    50   ~ 0
 USB_DP
-NoConn ~ 4500 5900
-NoConn ~ 4500 6000
 $Comp
 L mechanical-connectors:CONN_02X10 CN2
 U 1 1 5E31184F
@@ -358,7 +356,6 @@ Wire Wire Line
 	4750 5600 3800 5600
 Text Notes 4700 5850 0    50   ~ 0
 Pin 30 and 32 have pull up on Vidor 4000
-NoConn ~ 4500 5200
 Wire Wire Line
 	2650 4200 3300 4200
 Wire Wire Line
@@ -415,20 +412,6 @@ Text Label 2750 5000 0    50   ~ 0
 RSVD12
 Text Label 2750 5100 0    50   ~ 0
 RSVD13
-NoConn ~ 4500 4400
-NoConn ~ 4500 4500
-NoConn ~ 4500 4600
-NoConn ~ 4500 4700
-NoConn ~ 4500 4800
-NoConn ~ 4500 4900
-NoConn ~ 2650 4200
-NoConn ~ 2650 4300
-NoConn ~ 2650 4400
-NoConn ~ 2650 4500
-NoConn ~ 2650 4700
-NoConn ~ 2650 4800
-NoConn ~ 2650 5000
-NoConn ~ 2650 5100
 $Comp
 L MECH_smd-spacer:WA-SMSI_9774015151 MECH1
 U 1 1 5E3027E6
@@ -805,4 +788,191 @@ F 3 "" H 6200 2450 50  0000 C CNN
 $EndComp
 Text Label 7750 2050 0    50   ~ 0
 DOUT6_R
+$Comp
+L mechanical-connectors:TEST_1P W9
+U 1 1 5E310C83
+P 4500 4400
+F 0 "W9" V 4454 4588 50  0000 L CNN
+F 1 "TEST_1P" V 4545 4588 50  0000 L CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 4591 4588 50  0001 L CNN
+F 3 "" H 4700 4400 50  0000 C CNN
+	1    4500 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L mechanical-connectors:TEST_1P W10
+U 1 1 5E3153CE
+P 4500 4500
+F 0 "W10" V 4454 4688 50  0000 L CNN
+F 1 "TEST_1P" V 4545 4688 50  0000 L CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 4591 4688 50  0001 L CNN
+F 3 "" H 4700 4500 50  0000 C CNN
+	1    4500 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L mechanical-connectors:TEST_1P W11
+U 1 1 5E31571A
+P 4500 4600
+F 0 "W11" V 4454 4788 50  0000 L CNN
+F 1 "TEST_1P" V 4545 4788 50  0000 L CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 4591 4788 50  0001 L CNN
+F 3 "" H 4700 4600 50  0000 C CNN
+	1    4500 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L mechanical-connectors:TEST_1P W12
+U 1 1 5E3158F5
+P 4500 4700
+F 0 "W12" V 4454 4888 50  0000 L CNN
+F 1 "TEST_1P" V 4545 4888 50  0000 L CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 4591 4888 50  0001 L CNN
+F 3 "" H 4700 4700 50  0000 C CNN
+	1    4500 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L mechanical-connectors:TEST_1P W13
+U 1 1 5E315B8E
+P 4500 4800
+F 0 "W13" V 4454 4988 50  0000 L CNN
+F 1 "TEST_1P" V 4545 4988 50  0000 L CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 4591 4988 50  0001 L CNN
+F 3 "" H 4700 4800 50  0000 C CNN
+	1    4500 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L mechanical-connectors:TEST_1P W14
+U 1 1 5E315D78
+P 4500 4900
+F 0 "W14" V 4454 5088 50  0000 L CNN
+F 1 "TEST_1P" V 4545 5088 50  0000 L CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 4591 5088 50  0001 L CNN
+F 3 "" H 4700 4900 50  0000 C CNN
+	1    4500 4900
+	0    1    1    0   
+$EndComp
+$Comp
+L mechanical-connectors:TEST_1P W15
+U 1 1 5E315FB3
+P 4500 5200
+F 0 "W15" V 4454 5388 50  0000 L CNN
+F 1 "TEST_1P" V 4545 5388 50  0000 L CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 4591 5388 50  0001 L CNN
+F 3 "" H 4700 5200 50  0000 C CNN
+	1    4500 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L mechanical-connectors:TEST_1P W16
+U 1 1 5E316676
+P 4500 5900
+F 0 "W16" V 4454 6088 50  0000 L CNN
+F 1 "TEST_1P" V 4545 6088 50  0000 L CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 4591 6088 50  0001 L CNN
+F 3 "" H 4700 5900 50  0000 C CNN
+	1    4500 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L mechanical-connectors:TEST_1P W17
+U 1 1 5E316F5D
+P 4500 6000
+F 0 "W17" V 4454 6188 50  0000 L CNN
+F 1 "TEST_1P" V 4545 6188 50  0000 L CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 4591 6188 50  0001 L CNN
+F 3 "" H 4700 6000 50  0000 C CNN
+	1    4500 6000
+	0    1    1    0   
+$EndComp
+$Comp
+L mechanical-connectors:TEST_1P W8
+U 1 1 5E317186
+P 2650 5100
+F 0 "W8" V 2845 5172 50  0000 C CNN
+F 1 "TEST_1P" V 2754 5172 50  0000 C CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 5288 50  0001 L CNN
+F 3 "" H 2850 5100 50  0000 C CNN
+	1    2650 5100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L mechanical-connectors:TEST_1P W7
+U 1 1 5E31844B
+P 2650 5000
+F 0 "W7" V 2845 5072 50  0000 C CNN
+F 1 "TEST_1P" V 2754 5072 50  0000 C CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 5188 50  0001 L CNN
+F 3 "" H 2850 5000 50  0000 C CNN
+	1    2650 5000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L mechanical-connectors:TEST_1P W6
+U 1 1 5E318681
+P 2650 4800
+F 0 "W6" V 2845 4872 50  0000 C CNN
+F 1 "TEST_1P" V 2754 4872 50  0000 C CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 4988 50  0001 L CNN
+F 3 "" H 2850 4800 50  0000 C CNN
+	1    2650 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L mechanical-connectors:TEST_1P W5
+U 1 1 5E31885D
+P 2650 4700
+F 0 "W5" V 2845 4772 50  0000 C CNN
+F 1 "TEST_1P" V 2754 4772 50  0000 C CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 4888 50  0001 L CNN
+F 3 "" H 2850 4700 50  0000 C CNN
+	1    2650 4700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L mechanical-connectors:TEST_1P W4
+U 1 1 5E3198A2
+P 2650 4500
+F 0 "W4" V 2845 4572 50  0000 C CNN
+F 1 "TEST_1P" V 2754 4572 50  0000 C CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 4688 50  0001 L CNN
+F 3 "" H 2850 4500 50  0000 C CNN
+	1    2650 4500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L mechanical-connectors:TEST_1P W3
+U 1 1 5E319C0A
+P 2650 4400
+F 0 "W3" V 2845 4472 50  0000 C CNN
+F 1 "TEST_1P" V 2754 4472 50  0000 C CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 4588 50  0001 L CNN
+F 3 "" H 2850 4400 50  0000 C CNN
+	1    2650 4400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L mechanical-connectors:TEST_1P W2
+U 1 1 5E319E50
+P 2650 4300
+F 0 "W2" V 2845 4372 50  0000 C CNN
+F 1 "TEST_1P" V 2754 4372 50  0000 C CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 4488 50  0001 L CNN
+F 3 "" H 2850 4300 50  0000 C CNN
+	1    2650 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L mechanical-connectors:TEST_1P W1
+U 1 1 5E31A08D
+P 2650 4200
+F 0 "W1" V 2845 4272 50  0000 C CNN
+F 1 "TEST_1P" V 2754 4272 50  0000 C CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 4388 50  0001 L CNN
+F 3 "" H 2850 4200 50  0000 C CNN
+	1    2650 4200
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
