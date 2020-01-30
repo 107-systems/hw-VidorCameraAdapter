@@ -225,8 +225,6 @@ Wire Wire Line
 Wire Wire Line
 	6300 2350 6950 2350
 Wire Wire Line
-	6300 2450 6950 2450
-Wire Wire Line
 	8350 1650 7450 1650
 Wire Wire Line
 	8350 1750 7450 1750
@@ -243,7 +241,7 @@ Wire Wire Line
 Wire Wire Line
 	8350 2350 7450 2350
 Wire Wire Line
-	8350 2450 7450 2450
+	8350 2450 7850 2450
 Text Label 6500 1650 0    50   ~ 0
 SCL_R
 Text Label 7750 1650 0    50   ~ 0
@@ -256,7 +254,7 @@ Text Label 6500 1850 0    50   ~ 0
 PCLK_R
 Text Label 7750 1850 0    50   ~ 0
 XCLK_R
-Text Label 6500 2450 0    50   ~ 0
+Text Label 6500 2750 0    50   ~ 0
 RST_R
 Text Label 7750 2450 0    50   ~ 0
 PWDN_R
@@ -297,9 +295,9 @@ DOUT3
 Text Label 4200 6300 0    50   ~ 0
 DOUT1
 Wire Wire Line
-	6150 6650 5250 6650
+	6150 6650 5800 6650
 Wire Wire Line
-	6150 6750 5250 6750
+	6150 6750 6050 6750
 Text Label 5550 6650 0    50   ~ 0
 SDA
 Text Label 4200 5500 0    50   ~ 0
@@ -514,7 +512,7 @@ Wire Wire Line
 	6150 6850 6050 6850
 Wire Wire Line
 	6050 6850 6050 6950
-Text Notes 5200 6550 0    50   ~ 0
+Text Notes 5200 7350 0    50   ~ 0
 I2C is not on the Mini PCIe connecter\nso it has to come from somewhere else
 $Comp
 L devices:R_0603 R1
@@ -543,15 +541,13 @@ Wire Wire Line
 	5450 2250 6100 2250
 Wire Wire Line
 	5450 2350 6100 2350
-Wire Wire Line
-	5450 2450 6100 2450
 Text Label 5550 1650 0    50   ~ 0
 SCL
 Text Label 5550 1750 0    50   ~ 0
 VSYNC
 Text Label 5550 1850 0    50   ~ 0
 PCLK
-Text Label 5550 2450 0    50   ~ 0
+Text Label 5550 2750 0    50   ~ 0
 RST
 Text Label 5550 1950 0    50   ~ 0
 DOUT9
@@ -778,12 +774,12 @@ $EndComp
 $Comp
 L devices:R_0603 R9
 U 1 1 5E32ABC3
-P 6200 2450
-F 0 "R9" V 6150 2250 50  0000 C CNN
-F 1 "33R" V 6250 2600 50  0000 C CNN
-F 2 "resistors:R_0603" H 6200 2300 50  0001 C CNN
-F 3 "" H 6200 2450 50  0000 C CNN
-	1    6200 2450
+P 6200 2750
+F 0 "R9" V 6150 2550 50  0000 C CNN
+F 1 "33R" V 6250 2900 50  0000 C CNN
+F 2 "resistors:R_0603" H 6200 2600 50  0001 C CNN
+F 3 "" H 6200 2750 50  0000 C CNN
+	1    6200 2750
 	0    1    1    0   
 $EndComp
 Text Label 7750 2050 0    50   ~ 0
@@ -975,4 +971,128 @@ F 3 "" H 2850 4200 50  0000 C CNN
 	1    2650 4200
 	0    -1   -1   0   
 $EndComp
+Wire Wire Line
+	5450 2750 6100 2750
+Wire Wire Line
+	6300 2750 6900 2750
+Wire Wire Line
+	6900 2750 6900 2550
+Wire Wire Line
+	6900 2450 6950 2450
+$Comp
+L devices:R_0603 R19
+U 1 1 5E34B16D
+P 6600 2550
+F 0 "R19" V 6550 2350 50  0000 C CNN
+F 1 "10k" V 6650 2700 50  0000 C CNN
+F 2 "resistors:R_0603" H 6600 2400 50  0001 C CNN
+F 3 "" H 6600 2550 50  0000 C CNN
+	1    6600 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L power-supply:+3V3 #PWR02
+U 1 1 5E34B540
+P 6350 2550
+F 0 "#PWR02" H 6350 2400 50  0001 C CNN
+F 1 "+3V3" H 6365 2723 50  0000 C CNN
+F 2 "" H 6350 2550 50  0000 C CNN
+F 3 "" H 6350 2550 50  0000 C CNN
+	1    6350 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6350 2550 6500 2550
+Wire Wire Line
+	6700 2550 6900 2550
+Connection ~ 6900 2550
+Wire Wire Line
+	6900 2550 6900 2450
+$Comp
+L devices:R_0603 R20
+U 1 1 5E358A18
+P 7850 2600
+F 0 "R20" H 7909 2646 50  0000 L CNN
+F 1 "10k" H 7909 2555 50  0000 L CNN
+F 2 "resistors:R_0603" H 7850 2450 50  0001 C CNN
+F 3 "" H 7850 2600 50  0000 C CNN
+	1    7850 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power-supply:GND #PWR03
+U 1 1 5E359892
+P 7850 2750
+F 0 "#PWR03" H 7850 2500 50  0001 C CNN
+F 1 "GND" H 7855 2577 50  0000 C CNN
+F 2 "" H 7850 2750 50  0000 C CNN
+F 3 "" H 7850 2750 50  0000 C CNN
+	1    7850 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 2500 7850 2450
+Connection ~ 7850 2450
+Wire Wire Line
+	7850 2450 7450 2450
+Wire Wire Line
+	7850 2700 7850 2750
+$Comp
+L devices:R_0603 R21
+U 1 1 5E3698B8
+P 5800 6450
+F 0 "R21" H 5859 6496 50  0000 L CNN
+F 1 "10k" H 5859 6405 50  0000 L CNN
+F 2 "resistors:R_0603" H 5800 6300 50  0001 C CNN
+F 3 "" H 5800 6450 50  0000 C CNN
+	1    5800 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L devices:R_0603 R22
+U 1 1 5E36B62F
+P 6050 6450
+F 0 "R22" H 6109 6496 50  0000 L CNN
+F 1 "10k" H 6109 6405 50  0000 L CNN
+F 2 "resistors:R_0603" H 6050 6300 50  0001 C CNN
+F 3 "" H 6050 6450 50  0000 C CNN
+	1    6050 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power-supply:+3V3 #PWR04
+U 1 1 5E36D8CA
+P 5800 6300
+F 0 "#PWR04" H 5800 6150 50  0001 C CNN
+F 1 "+3V3" H 5815 6473 50  0000 C CNN
+F 2 "" H 5800 6300 50  0000 C CNN
+F 3 "" H 5800 6300 50  0000 C CNN
+	1    5800 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power-supply:+3V3 #PWR05
+U 1 1 5E370008
+P 6050 6300
+F 0 "#PWR05" H 6050 6150 50  0001 C CNN
+F 1 "+3V3" H 6065 6473 50  0000 C CNN
+F 2 "" H 6050 6300 50  0000 C CNN
+F 3 "" H 6050 6300 50  0000 C CNN
+	1    6050 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 6550 5800 6650
+Connection ~ 5800 6650
+Wire Wire Line
+	5800 6650 5250 6650
+Wire Wire Line
+	6050 6550 6050 6750
+Connection ~ 6050 6750
+Wire Wire Line
+	6050 6750 5250 6750
+Wire Wire Line
+	6050 6350 6050 6300
+Wire Wire Line
+	5800 6350 5800 6300
 $EndSCHEMATC
