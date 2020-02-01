@@ -9,3 +9,7 @@ adapter to connect a OV2640 camera to the Mini PCIe connector of the Arduino MKR
 
 ![vidorcameraadapter PCB top](docs/images/vidorcameraadapter_top.png)
 
+### Bot
+
+![vidorcameraadapter PCB bot](docs/images/vidorcameraadapter_bot.png)
+
