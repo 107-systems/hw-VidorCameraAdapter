@@ -1381,4 +1381,6 @@ Wire Wire Line
 Connection ~ 10750 5750
 Wire Wire Line
 	10750 5750 10750 5550
+Text Notes 5650 1100 0    50   ~ 0
+for use with Arducam OV2640 breakout board with M12 lens\nhttps://www.arducam.com/product/2mp-ov2640-camera-module/
 $EndSCHEMATC
