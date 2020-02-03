@@ -1,4 +1,4 @@
-3913905448014253
+3920237504158253
 CON_lumberg
 1501_02
 
@@ -637,6 +637,13 @@ HLGA-10L
 10
 10
 IC_sensor
+TCRT1000
+Reflective Optical Sensor with Transistor Output
+Reflective Optical Sensor with Transistor Output
+0
+4
+4
+IC_sensor
 VL53L0X
 Time-of-Flight (ToF) ranging sensor 
 Time-of-Flight (ToF) ranging sensor 
@@ -839,6 +846,13 @@ KEYSTONE_1043
 0
 2
 2
+MECH_mounting_holes
+MHP_3.2_5.8
+Mounting hole plated, 3.2mm drill, 5.8mm diameter
+Mounting hole plated, 3.2mm drill, 5.8mm diameter
+0
+1
+0
 MECH_mounting_holes
 MH_210_400_NP
 
@@ -17121,6 +17135,20 @@ würth switch
 0
 3
 3
+wire_pads
+SolderJumper_2mm
+SolderJumper 2 pad, 2mm long
+SolderJumper 2 pad, 2mm long
+0
+2
+2
+wire_pads
+SolderJumper_3mm
+SolderJumper 2 pad, 3mm long
+SolderJumper 2 pad, 3mm long
+0
+2
+2
 wire_pads
 SolderWirePad_2x_0-8mmDrill
 
