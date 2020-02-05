@@ -280,15 +280,15 @@ Text Label 5450 7150 0    50   ~ 0
 SCL
 Text Label 4200 5100 0    50   ~ 0
 VSYNC
-Text Label 2550 5300 0    50   ~ 0
+Text Label 2550 6500 0    50   ~ 0
 XCLK
 Text Label 4200 4800 0    50   ~ 0
 RST
 Text Label 2550 6700 0    50   ~ 0
 DOUT9
-Text Label 2550 6500 0    50   ~ 0
-DOUT7
 Text Label 2550 5800 0    50   ~ 0
+DOUT7
+Text Label 2550 5700 0    50   ~ 0
 DOUT5
 Text Label 4200 6500 0    50   ~ 0
 DOUT3
@@ -302,15 +302,15 @@ Text Label 5450 7050 0    50   ~ 0
 SDA
 Text Label 4200 5500 0    50   ~ 0
 HREF
-Text Label 2550 5400 0    50   ~ 0
+Text Label 2550 5300 0    50   ~ 0
 PCLK
 Text Label 4200 4900 0    50   ~ 0
 PWDN
 Text Label 2550 6600 0    50   ~ 0
 DOUT8
-Text Label 2550 6400 0    50   ~ 0
+Text Label 2550 4800 0    50   ~ 0
 DOUT6
-Text Label 2550 5700 0    50   ~ 0
+Text Label 2550 5400 0    50   ~ 0
 DOUT4
 Text Label 4200 6400 0    50   ~ 0
 DOUT2
@@ -368,15 +368,13 @@ Wire Wire Line
 	4500 5700 3800 5700
 Wire Wire Line
 	4500 5600 3800 5600
-Wire Wire Line
-	4500 4400 3800 4400
 Text Label 2750 4200 0    50   ~ 0
 RSVD0
 Text Label 2750 4300 0    50   ~ 0
 RSVD1
 Text Label 2750 4400 0    50   ~ 0
 RSVD2
-Text Label 4100 4400 0    50   ~ 0
+Text Label 2750 4700 0    50   ~ 0
 RSVD3
 Text Label 2750 4500 0    50   ~ 0
 RSVD4
@@ -394,9 +392,9 @@ Text Label 4100 4600 0    50   ~ 0
 SDA_V
 Text Label 4100 4700 0    50   ~ 0
 SCL_V
-Text Label 2550 4700 0    50   ~ 0
+Text Label 4100 4400 0    50   ~ 0
 LED_G
-Text Label 2550 4800 0    50   ~ 0
+Text Label 2550 6400 0    50   ~ 0
 LED_B
 $Comp
 L MECH_smd-spacer:WA-SMSI_9774015151 MECH1
@@ -775,13 +773,13 @@ DOUT6_R
 $Comp
 L mechanical-connectors:TEST_1P W9
 U 1 1 5E310C83
-P 4500 4400
-F 0 "W9" V 4454 4588 50  0000 L CNN
-F 1 "TEST_1P" V 4545 4588 50  0001 L CNN
-F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 4591 4588 50  0001 L CNN
-F 3 "" H 4700 4400 50  0000 C CNN
-	1    4500 4400
-	0    1    1    0   
+P 2650 4700
+F 0 "W9" V 2604 4888 50  0000 L CNN
+F 1 "TEST_1P" V 2695 4888 50  0001 L CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 4888 50  0001 L CNN
+F 3 "" H 2850 4700 50  0000 C CNN
+	1    2650 4700
+	0    -1   -1   0   
 $EndComp
 $Comp
 L mechanical-connectors:TEST_1P W10
@@ -1350,8 +1348,6 @@ Text Label 9100 5950 0    50   ~ 0
 LED_B
 Wire Wire Line
 	2450 4800 3300 4800
-Wire Wire Line
-	2450 4700 3300 4700
 $Comp
 L devices:LED_RGB D6
 U 1 1 5E34D3F1
@@ -1574,4 +1570,8 @@ Wire Wire Line
 	4750 4500 3800 4500
 Text Notes 1200 5350 0    50   ~ 0
 Pin 1, 3, 5, 7, 17 and 19 \nare also connected to \nthe WiFi NINA module \non the Vidor 4000
+Wire Wire Line
+	3800 4400 4750 4400
+Wire Wire Line
+	3300 4700 2650 4700
 $EndSCHEMATC
