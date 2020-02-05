@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "VidorCameraAdapter"
+Date "2020-02-05"
+Rev "0.1"
+Comp "107-systems"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -281,8 +281,8 @@ SCL
 Text Label 4200 5100 0    50   ~ 0
 VSYNC
 Text Label 2550 5300 0    50   ~ 0
-PCLK
-Text Label 4200 5600 0    50   ~ 0
+XCLK
+Text Label 4200 4800 0    50   ~ 0
 RST
 Text Label 2550 6700 0    50   ~ 0
 DOUT9
@@ -303,8 +303,8 @@ SDA
 Text Label 4200 5500 0    50   ~ 0
 HREF
 Text Label 2550 5400 0    50   ~ 0
-XCLK
-Text Label 4200 5700 0    50   ~ 0
+PCLK
+Text Label 4200 4900 0    50   ~ 0
 PWDN
 Text Label 2550 6600 0    50   ~ 0
 DOUT8
@@ -349,9 +349,9 @@ Wire Wire Line
 Text Label 4100 5200 0    50   ~ 0
 PEX_RST
 Wire Wire Line
-	4750 5700 3800 5700
+	4750 4900 3800 4900
 Wire Wire Line
-	4750 5600 3800 5600
+	4750 4800 3800 4800
 Text Notes 4850 5750 0    50   ~ 0
 Pin 30 and 32 have \npull up on Vidor 4000
 Wire Wire Line
@@ -363,13 +363,11 @@ Wire Wire Line
 Wire Wire Line
 	2650 4500 3300 4500
 Wire Wire Line
-	2650 4700 3300 4700
+	2650 5100 3300 5100
 Wire Wire Line
-	4500 4700 3800 4700
+	4500 5700 3800 5700
 Wire Wire Line
-	4500 4600 3800 4600
-Wire Wire Line
-	4500 4500 3800 4500
+	4500 5600 3800 5600
 Wire Wire Line
 	4500 4400 3800 4400
 Text Label 2750 4200 0    50   ~ 0
@@ -382,23 +380,23 @@ Text Label 4100 4400 0    50   ~ 0
 RSVD3
 Text Label 2750 4500 0    50   ~ 0
 RSVD4
-Text Label 4100 4500 0    50   ~ 0
+Text Label 2750 5000 0    50   ~ 0
 RSVD5
-Text Label 4100 4600 0    50   ~ 0
+Text Label 4100 5600 0    50   ~ 0
 RSVD6
-Text Label 2750 4700 0    50   ~ 0
+Text Label 2750 5100 0    50   ~ 0
 RSVD7
-Text Label 4100 4700 0    50   ~ 0
+Text Label 4100 5700 0    50   ~ 0
 RSVD8
-Text Label 2550 4800 0    50   ~ 0
+Text Label 4100 4500 0    50   ~ 0
 LED_R
-Text Label 4100 4800 0    50   ~ 0
+Text Label 4100 4600 0    50   ~ 0
 SDA_V
-Text Label 4100 4900 0    50   ~ 0
+Text Label 4100 4700 0    50   ~ 0
 SCL_V
-Text Label 2550 5000 0    50   ~ 0
+Text Label 2550 4700 0    50   ~ 0
 LED_G
-Text Label 2550 5100 0    50   ~ 0
+Text Label 2550 4800 0    50   ~ 0
 LED_B
 $Comp
 L MECH_smd-spacer:WA-SMSI_9774015151 MECH1
@@ -788,34 +786,34 @@ $EndComp
 $Comp
 L mechanical-connectors:TEST_1P W10
 U 1 1 5E3153CE
-P 4500 4500
-F 0 "W10" V 4454 4688 50  0000 L CNN
-F 1 "TEST_1P" V 4545 4688 50  0001 L CNN
-F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 4591 4688 50  0001 L CNN
-F 3 "" H 4700 4500 50  0000 C CNN
-	1    4500 4500
-	0    1    1    0   
+P 2650 5000
+F 0 "W10" V 2650 5200 50  0000 L CNN
+F 1 "TEST_1P" V 2695 5188 50  0001 L CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 5188 50  0001 L CNN
+F 3 "" H 2850 5000 50  0000 C CNN
+	1    2650 5000
+	0    -1   -1   0   
 $EndComp
 $Comp
 L mechanical-connectors:TEST_1P W11
 U 1 1 5E31571A
-P 4500 4600
-F 0 "W11" V 4454 4788 50  0000 L CNN
-F 1 "TEST_1P" V 4545 4788 50  0001 L CNN
-F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 4591 4788 50  0001 L CNN
-F 3 "" H 4700 4600 50  0000 C CNN
-	1    4500 4600
+P 4500 5600
+F 0 "W11" V 4454 5788 50  0000 L CNN
+F 1 "TEST_1P" V 4545 5788 50  0001 L CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 4591 5788 50  0001 L CNN
+F 3 "" H 4700 5600 50  0000 C CNN
+	1    4500 5600
 	0    1    1    0   
 $EndComp
 $Comp
 L mechanical-connectors:TEST_1P W12
 U 1 1 5E3158F5
-P 4500 4700
-F 0 "W12" V 4454 4888 50  0000 L CNN
-F 1 "TEST_1P" V 4545 4888 50  0001 L CNN
-F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 4591 4888 50  0001 L CNN
-F 3 "" H 4700 4700 50  0000 C CNN
-	1    4500 4700
+P 4500 5700
+F 0 "W12" V 4454 5888 50  0000 L CNN
+F 1 "TEST_1P" V 4545 5888 50  0001 L CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 4591 5888 50  0001 L CNN
+F 3 "" H 4700 5700 50  0000 C CNN
+	1    4500 5700
 	0    1    1    0   
 $EndComp
 $Comp
@@ -854,12 +852,12 @@ $EndComp
 $Comp
 L mechanical-connectors:TEST_1P W5
 U 1 1 5E31885D
-P 2650 4700
-F 0 "W5" V 2650 4950 50  0000 C CNN
-F 1 "TEST_1P" V 2754 4772 50  0001 C CNN
-F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 4888 50  0001 L CNN
-F 3 "" H 2850 4700 50  0000 C CNN
-	1    2650 4700
+P 2650 5100
+F 0 "W5" V 2650 5350 50  0000 C CNN
+F 1 "TEST_1P" V 2754 5172 50  0001 C CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 5288 50  0001 L CNN
+F 3 "" H 2850 5100 50  0000 C CNN
+	1    2650 5100
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -1033,36 +1031,36 @@ Wire Wire Line
 $Comp
 L devices:R_0603 R24
 U 1 1 5E341057
-P 5100 4900
-F 0 "R24" V 5050 4700 50  0000 C CNN
-F 1 "0R" V 5150 5050 50  0000 C CNN
-F 2 "resistors:R_0603" H 5100 4750 50  0001 C CNN
-F 3 "" H 5100 4900 50  0000 C CNN
-	1    5100 4900
+P 5100 4700
+F 0 "R24" V 5050 4500 50  0000 C CNN
+F 1 "0R" V 5150 4850 50  0000 C CNN
+F 2 "resistors:R_0603" H 5100 4550 50  0001 C CNN
+F 3 "" H 5100 4700 50  0000 C CNN
+	1    5100 4700
 	0    1    1    0   
 $EndComp
 $Comp
 L devices:R_0603 R23
 U 1 1 5E3420FD
-P 5100 4800
-F 0 "R23" V 5050 4600 50  0000 C CNN
-F 1 "0R" V 5150 4950 50  0000 C CNN
-F 2 "resistors:R_0603" H 5100 4650 50  0001 C CNN
-F 3 "" H 5100 4800 50  0000 C CNN
-	1    5100 4800
+P 5100 4600
+F 0 "R23" V 5050 4400 50  0000 C CNN
+F 1 "0R" V 5150 4750 50  0000 C CNN
+F 2 "resistors:R_0603" H 5100 4450 50  0001 C CNN
+F 3 "" H 5100 4600 50  0000 C CNN
+	1    5100 4600
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5950 4900 5200 4900
+	5950 4700 5200 4700
 Wire Wire Line
-	5950 4800 5200 4800
+	5950 4600 5200 4600
 Wire Wire Line
-	3800 4800 5000 4800
+	3800 4600 5000 4600
 Wire Wire Line
-	3800 4900 5000 4900
-Text Label 5400 4800 0    50   ~ 0
+	3800 4700 5000 4700
+Text Label 5400 4600 0    50   ~ 0
 SDA
-Text Label 5400 4900 0    50   ~ 0
+Text Label 5400 4700 0    50   ~ 0
 SCL
 $Comp
 L devices:Led_Small D5
@@ -1351,11 +1349,9 @@ LED_G
 Text Label 9100 5950 0    50   ~ 0
 LED_B
 Wire Wire Line
-	2450 5100 3300 5100
-Wire Wire Line
-	2450 5000 3300 5000
-Wire Wire Line
 	2450 4800 3300 4800
+Wire Wire Line
+	2450 4700 3300 4700
 $Comp
 L devices:LED_RGB D6
 U 1 1 5E34D3F1
@@ -1572,4 +1568,10 @@ Wire Wire Line
 	5950 6450 5950 6500
 Wire Wire Line
 	5700 6450 5700 6500
+Wire Wire Line
+	3300 5000 2650 5000
+Wire Wire Line
+	4750 4500 3800 4500
+Text Notes 1200 5350 0    50   ~ 0
+Pin 1, 3, 5, 7, 17 and 19 \nare also connected to \nthe WiFi NINA module \non the Vidor 4000
 $EndSCHEMATC
