@@ -1,0 +1,14 @@
+VidorCameraAdaptder - connect a OV2640 parallel camera to the Mini PCIe connector of the Arduino MKR Vidor 4000
+see full documentation at https://github.com/107-systems/VidorCameraAdapter
+
+changes
+
+version 0.1 - 2020-02-05
+* initial release
+
+version 0.1.1 - 2020-02-22
+* changed resistors for leds from 1k to 3k3
+
+
+
+
