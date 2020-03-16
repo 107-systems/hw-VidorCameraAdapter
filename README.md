@@ -1,5 +1,7 @@
 # VidorCameraAdapter
-adapter to connect a OV2640 camera to the Mini PCIe connector of the Arduino MKR Vidor 4000
+Adapter to connect a OV2640 camera module to the Mini PCIe connector of the Arduino MKR Vidor 4000.
+
+![VidorCameraAdapter v0.1](docs/images/VidorCameraAdapter-v0.1.jpg)
 
 ![vidorcameraadapter rendering](docs/images/vidorcameraadapter_rendering.png)
 
