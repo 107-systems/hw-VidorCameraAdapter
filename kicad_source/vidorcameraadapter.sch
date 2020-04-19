@@ -14,6 +14,17 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
+L mechanical-connectors:CONN_02X26 CN1
+U 1 1 5E2F7F0A
+P 3550 5450
+F 0 "CN1" H 3550 6915 50  0000 C CNN
+F 1 "TE_2041119-2" H 3550 6824 50  0000 C CNN
+F 2 "connectors_pci-express:MPCIe_4mm" H 3550 4750 50  0001 C CNN
+F 3 "" H 3550 4750 50  0000 C CNN
+	1    3550 5450
+	1    0    0    -1  
+$EndComp
+$Comp
 L power-supply:GND #PWR0101
 U 1 1 5E2FA375
 P 3900 6800
@@ -27,12 +38,12 @@ $EndComp
 $Comp
 L power-supply:+3V3 #PWR0102
 U 1 1 5E2FB01A
-P 4000 4000
-F 0 "#PWR0102" H 4000 3850 50  0001 C CNN
-F 1 "+3V3" H 4015 4173 50  0000 C CNN
-F 2 "" H 4000 4000 50  0000 C CNN
-F 3 "" H 4000 4000 50  0000 C CNN
-	1    4000 4000
+P 4000 4100
+F 0 "#PWR0102" H 4000 3950 50  0001 C CNN
+F 1 "+3V3" H 4015 4273 50  0000 C CNN
+F 2 "" H 4000 4100 50  0000 C CNN
+F 3 "" H 4000 4100 50  0000 C CNN
+	1    4000 4100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -40,37 +51,50 @@ Wire Wire Line
 Wire Wire Line
 	4000 6700 4000 5300
 Wire Wire Line
+	3800 4200 4000 4200
+Connection ~ 4000 4200
+Wire Wire Line
+	4000 4200 4000 4100
+Wire Wire Line
 	3800 5300 4000 5300
 Connection ~ 4000 5300
+Wire Wire Line
+	4000 5300 4000 4200
 $Comp
 L power-supply:+3V3 #PWR0103
 U 1 1 5E2FF5C3
-P 2100 4000
-F 0 "#PWR0103" H 2100 3850 50  0001 C CNN
-F 1 "+3V3" H 2115 4173 50  0000 C CNN
-F 2 "" H 2100 4000 50  0000 C CNN
-F 3 "" H 2100 4000 50  0000 C CNN
-	1    2100 4000
+P 3100 4100
+F 0 "#PWR0103" H 3100 3950 50  0001 C CNN
+F 1 "+3V3" H 3115 4273 50  0000 C CNN
+F 2 "" H 3100 4100 50  0000 C CNN
+F 3 "" H 3100 4100 50  0000 C CNN
+	1    3100 4100
 	1    0    0    -1  
 $EndComp
 $Comp
 L power-supply:GND #PWR0104
 U 1 1 5E301440
-P 2200 6800
-F 0 "#PWR0104" H 2200 6550 50  0001 C CNN
-F 1 "GND" H 2205 6627 50  0000 C CNN
-F 2 "" H 2200 6800 50  0000 C CNN
-F 3 "" H 2200 6800 50  0000 C CNN
-	1    2200 6800
+P 3200 6800
+F 0 "#PWR0104" H 3200 6550 50  0001 C CNN
+F 1 "GND" H 3205 6627 50  0000 C CNN
+F 2 "" H 3200 6800 50  0000 C CNN
+F 3 "" H 3200 6800 50  0000 C CNN
+	1    3200 6800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2300 6200 2100 6200
+	3300 6200 3100 6200
 Wire Wire Line
-	2100 6200 2100 6100
+	3100 6200 3100 6100
 Wire Wire Line
-	2300 6100 2100 6100
-Connection ~ 2100 6100
+	3300 6100 3100 6100
+Connection ~ 3100 6100
+Wire Wire Line
+	3100 6100 3100 4100
+Wire Wire Line
+	3800 4300 3900 4300
+Wire Wire Line
+	3900 4300 3900 5000
 Wire Wire Line
 	3800 5000 3900 5000
 Connection ~ 3900 5000
@@ -97,35 +121,44 @@ Connection ~ 3900 6600
 Wire Wire Line
 	3900 6600 3900 6800
 Wire Wire Line
-	2300 5200 2200 5200
-Connection ~ 2200 5200
+	3300 4600 3200 4600
 Wire Wire Line
-	2200 5200 2200 5500
+	3200 4600 3200 4900
 Wire Wire Line
-	2300 5500 2200 5500
-Connection ~ 2200 5500
+	3300 4900 3200 4900
+Connection ~ 3200 4900
 Wire Wire Line
-	2200 5500 2200 5600
+	3200 4900 3200 5200
 Wire Wire Line
-	2300 5600 2200 5600
-Connection ~ 2200 5600
+	3300 5200 3200 5200
+Connection ~ 3200 5200
 Wire Wire Line
-	2200 5600 2200 5900
+	3200 5200 3200 5500
 Wire Wire Line
-	2300 5900 2200 5900
-Connection ~ 2200 5900
+	3300 5500 3200 5500
+Connection ~ 3200 5500
 Wire Wire Line
-	2200 5900 2200 6000
+	3200 5500 3200 5600
 Wire Wire Line
-	2300 6000 2200 6000
-Connection ~ 2200 6000
+	3300 5600 3200 5600
+Connection ~ 3200 5600
 Wire Wire Line
-	2200 6000 2200 6300
+	3200 5600 3200 5900
 Wire Wire Line
-	2300 6300 2200 6300
-Connection ~ 2200 6300
+	3300 5900 3200 5900
+Connection ~ 3200 5900
 Wire Wire Line
-	2200 6300 2200 6800
+	3200 5900 3200 6000
+Wire Wire Line
+	3300 6000 3200 6000
+Connection ~ 3200 6000
+Wire Wire Line
+	3200 6000 3200 6300
+Wire Wire Line
+	3300 6300 3200 6300
+Connection ~ 3200 6300
+Wire Wire Line
+	3200 6300 3200 6800
 Wire Wire Line
 	4500 5900 3800 5900
 Wire Wire Line
@@ -247,15 +280,15 @@ Text Label 5450 7150 0    50   ~ 0
 SCL
 Text Label 4200 5100 0    50   ~ 0
 VSYNC
-Text Label 1550 6500 0    50   ~ 0
+Text Label 2550 6500 0    50   ~ 0
 XCLK
-Text Label 4200 4700 0    50   ~ 0
+Text Label 4200 4800 0    50   ~ 0
 RST
-Text Label 1550 6700 0    50   ~ 0
+Text Label 2550 6700 0    50   ~ 0
 DOUT9
-Text Label 1550 5800 0    50   ~ 0
+Text Label 2550 5800 0    50   ~ 0
 DOUT7
-Text Label 1550 5700 0    50   ~ 0
+Text Label 2550 5700 0    50   ~ 0
 DOUT5
 Text Label 4200 6500 0    50   ~ 0
 DOUT3
@@ -269,28 +302,28 @@ Text Label 5450 7050 0    50   ~ 0
 SDA
 Text Label 4200 5500 0    50   ~ 0
 HREF
-Text Label 1550 5300 0    50   ~ 0
+Text Label 2550 5300 0    50   ~ 0
 PCLK
-Text Label 4200 4800 0    50   ~ 0
+Text Label 4200 4900 0    50   ~ 0
 PWDN
-Text Label 1550 6600 0    50   ~ 0
+Text Label 2550 6600 0    50   ~ 0
 DOUT8
-Text Label 1550 4700 0    50   ~ 0
+Text Label 2550 4800 0    50   ~ 0
 DOUT6
-Text Label 1550 5400 0    50   ~ 0
+Text Label 2550 5400 0    50   ~ 0
 DOUT4
 Text Label 4200 6400 0    50   ~ 0
 DOUT2
 Text Label 4200 6200 0    50   ~ 0
 DOUT0
 Wire Wire Line
-	1450 6700 2300 6700
+	2450 6700 3300 6700
 Wire Wire Line
-	1450 6600 2300 6600
+	2450 6600 3300 6600
 Wire Wire Line
-	1450 6500 2300 6500
+	2450 6500 3300 6500
 Wire Wire Line
-	1450 6400 2300 6400
+	2450 6400 3300 6400
 Wire Wire Line
 	4750 6500 3800 6500
 Wire Wire Line
@@ -300,9 +333,9 @@ Wire Wire Line
 Wire Wire Line
 	4750 6200 3800 6200
 Wire Wire Line
-	1450 5800 2300 5800
+	2450 5800 3300 5800
 Wire Wire Line
-	1450 5700 2300 5700
+	2450 5700 3300 5700
 Wire Wire Line
 	4750 5100 3800 5100
 Wire Wire Line
@@ -310,79 +343,79 @@ Wire Wire Line
 Wire Wire Line
 	4500 5200 3800 5200
 Wire Wire Line
-	1450 5300 2300 5300
+	2450 5300 3300 5300
 Wire Wire Line
-	1450 5400 2300 5400
+	2450 5400 3300 5400
 Text Label 4100 5200 0    50   ~ 0
 PEX_RST
 Wire Wire Line
-	4750 4800 3800 4800
+	4750 4900 3800 4900
 Wire Wire Line
-	4750 4700 3800 4700
+	4750 4800 3800 4800
 Text Notes 4850 5750 0    50   ~ 0
 Pin 30 and 32 have \npull up on Vidor 4000
 Wire Wire Line
-	1650 4100 2300 4100
+	2650 4200 3300 4200
 Wire Wire Line
-	1650 4200 2300 4200
+	2650 4300 3300 4300
 Wire Wire Line
-	1650 4300 2300 4300
+	2650 4400 3300 4400
 Wire Wire Line
-	1650 4400 2300 4400
+	2650 4500 3300 4500
 Wire Wire Line
-	1650 5100 2300 5100
+	2650 5100 3300 5100
 Wire Wire Line
 	4500 5700 3800 5700
 Wire Wire Line
 	4500 5600 3800 5600
-Text Label 1750 4100 0    50   ~ 0
+Text Label 2750 4200 0    50   ~ 0
 RSVD0
-Text Label 1750 4200 0    50   ~ 0
+Text Label 2750 4300 0    50   ~ 0
 RSVD1
-Text Label 1750 4300 0    50   ~ 0
+Text Label 2750 4400 0    50   ~ 0
 RSVD2
-Text Label 1750 4600 0    50   ~ 0
+Text Label 2750 4700 0    50   ~ 0
 RSVD3
-Text Label 1750 4400 0    50   ~ 0
+Text Label 2750 4500 0    50   ~ 0
 RSVD4
-Text Label 1750 5000 0    50   ~ 0
+Text Label 2750 5000 0    50   ~ 0
 RSVD5
 Text Label 4100 5600 0    50   ~ 0
 RSVD6
-Text Label 1750 5100 0    50   ~ 0
+Text Label 2750 5100 0    50   ~ 0
 RSVD7
 Text Label 4100 5700 0    50   ~ 0
 RSVD8
-Text Label 4100 4400 0    50   ~ 0
-LED_R
 Text Label 4100 4500 0    50   ~ 0
-SDA_V
+LED_R
 Text Label 4100 4600 0    50   ~ 0
+SDA_V
+Text Label 4100 4700 0    50   ~ 0
 SCL_V
-Text Label 4100 4300 0    50   ~ 0
+Text Label 4100 4400 0    50   ~ 0
 LED_G
-Text Label 1550 6400 0    50   ~ 0
+Text Label 2550 6400 0    50   ~ 0
 LED_B
 $Comp
 L MECH_smd-spacer:WA-SMSI_9774015151 MECH1
 U 1 1 5E3027E6
-P 1050 3200
-F 0 "MECH1" H 1178 3246 50  0000 L CNN
-F 1 "WA-SMSI_9774015151" H 1178 3155 50  0000 L CNN
-F 2 "MECH_smd-spacer:WA-SMSI_9774015151" H 950 3250 50  0001 C CNN
-F 3 "" H 1050 3200 50  0001 C CNN
-	1    1050 3200
+P 1000 4300
+F 0 "MECH1" H 1128 4346 50  0000 L CNN
+F 1 "WA-SMSI_9774015151" H 1128 4255 50  0000 L CNN
+F 2 "MECH_smd-spacer:WA-SMSI_9774015151" H 900 4350 50  0001 C CNN
+F 3 "" H 1000 4300 50  0001 C CNN
+	1    1000 4300
 	1    0    0    -1  
 $EndComp
 $Comp
 L MECH_smd-spacer:WA-SMSI_9774015151 MECH2
 U 1 1 5E305119
-P 1050 3500
-F 0 "MECH2" H 1178 3546 50  0000 L CNN
-F 1 "WA-SMSI_9774015151" H 1178 3455 50  0000 L CNN
-F 2 "MECH_smd-spacer:WA-SMSI_9774015151" H 950 3550 50  0001 C CNN
-F 3 "" H 1050 3500 50  0001 C CNN
-	1    1050 3500
+P 1000 4600
+F 0 "MECH2" H 1128 4646 50  0000 L CNN
+F 1 "WA-SMSI_9774015151" H 1128 4555 50  0000 L CNN
+F 2 "MECH_smd-spacer:WA-SMSI_9774015151" H 900 4650 50  0001 C CNN
+F 3 "" H 1000 4600 50  0001 C CNN
+	1    1000 4600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -433,9 +466,9 @@ NoConn ~ 9900 3150
 NoConn ~ 9900 3400
 NoConn ~ 9900 3650
 NoConn ~ 9900 3900
-NoConn ~ 750  3200
-NoConn ~ 750  3500
-Text Notes 700  3000 0    50   ~ 0
+NoConn ~ 700  4300
+NoConn ~ 700  4600
+Text Notes 650  4100 0    50   ~ 0
 mounting spacers for Vidor 4000
 Text Notes 9550 2950 0    50   ~ 0
 mounting spacers for camera module
@@ -740,23 +773,23 @@ DOUT6_R
 $Comp
 L mechanical-connectors:TEST_1P W9
 U 1 1 5E310C83
-P 1650 4600
-F 0 "W9" V 1604 4788 50  0000 L CNN
-F 1 "TEST_1P" V 1695 4788 50  0001 L CNN
-F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 1741 4788 50  0001 L CNN
-F 3 "" H 1850 4600 50  0000 C CNN
-	1    1650 4600
+P 2650 4700
+F 0 "W9" V 2604 4888 50  0000 L CNN
+F 1 "TEST_1P" V 2695 4888 50  0001 L CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 4888 50  0001 L CNN
+F 3 "" H 2850 4700 50  0000 C CNN
+	1    2650 4700
 	0    -1   -1   0   
 $EndComp
 $Comp
 L mechanical-connectors:TEST_1P W10
 U 1 1 5E3153CE
-P 1650 5000
-F 0 "W10" V 1650 5200 50  0000 L CNN
-F 1 "TEST_1P" V 1695 5188 50  0001 L CNN
-F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 1741 5188 50  0001 L CNN
-F 3 "" H 1850 5000 50  0000 C CNN
-	1    1650 5000
+P 2650 5000
+F 0 "W10" V 2650 5200 50  0000 L CNN
+F 1 "TEST_1P" V 2695 5188 50  0001 L CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 5188 50  0001 L CNN
+F 3 "" H 2850 5000 50  0000 C CNN
+	1    2650 5000
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -817,56 +850,56 @@ $EndComp
 $Comp
 L mechanical-connectors:TEST_1P W5
 U 1 1 5E31885D
-P 1650 5100
-F 0 "W5" V 1650 5350 50  0000 C CNN
-F 1 "TEST_1P" V 1754 5172 50  0001 C CNN
-F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 1741 5288 50  0001 L CNN
-F 3 "" H 1850 5100 50  0000 C CNN
-	1    1650 5100
+P 2650 5100
+F 0 "W5" V 2650 5350 50  0000 C CNN
+F 1 "TEST_1P" V 2754 5172 50  0001 C CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 5288 50  0001 L CNN
+F 3 "" H 2850 5100 50  0000 C CNN
+	1    2650 5100
 	0    -1   -1   0   
 $EndComp
 $Comp
 L mechanical-connectors:TEST_1P W4
 U 1 1 5E3198A2
-P 1650 4400
-F 0 "W4" V 1650 4650 50  0000 C CNN
-F 1 "TEST_1P" V 1754 4472 50  0001 C CNN
-F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 1741 4588 50  0001 L CNN
-F 3 "" H 1850 4400 50  0000 C CNN
-	1    1650 4400
+P 2650 4500
+F 0 "W4" V 2650 4750 50  0000 C CNN
+F 1 "TEST_1P" V 2754 4572 50  0001 C CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 4688 50  0001 L CNN
+F 3 "" H 2850 4500 50  0000 C CNN
+	1    2650 4500
 	0    -1   -1   0   
 $EndComp
 $Comp
 L mechanical-connectors:TEST_1P W3
 U 1 1 5E319C0A
-P 1650 4300
-F 0 "W3" V 1650 4550 50  0000 C CNN
-F 1 "TEST_1P" V 1754 4372 50  0001 C CNN
-F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 1741 4488 50  0001 L CNN
-F 3 "" H 1850 4300 50  0000 C CNN
-	1    1650 4300
+P 2650 4400
+F 0 "W3" V 2650 4650 50  0000 C CNN
+F 1 "TEST_1P" V 2754 4472 50  0001 C CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 4588 50  0001 L CNN
+F 3 "" H 2850 4400 50  0000 C CNN
+	1    2650 4400
 	0    -1   -1   0   
 $EndComp
 $Comp
 L mechanical-connectors:TEST_1P W2
 U 1 1 5E319E50
-P 1650 4200
-F 0 "W2" V 1650 4450 50  0000 C CNN
-F 1 "TEST_1P" V 1754 4272 50  0001 C CNN
-F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 1741 4388 50  0001 L CNN
-F 3 "" H 1850 4200 50  0000 C CNN
-	1    1650 4200
+P 2650 4300
+F 0 "W2" V 2650 4550 50  0000 C CNN
+F 1 "TEST_1P" V 2754 4372 50  0001 C CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 4488 50  0001 L CNN
+F 3 "" H 2850 4300 50  0000 C CNN
+	1    2650 4300
 	0    -1   -1   0   
 $EndComp
 $Comp
 L mechanical-connectors:TEST_1P W1
 U 1 1 5E31A08D
-P 1650 4100
-F 0 "W1" V 1650 4350 50  0000 C CNN
-F 1 "TEST_1P" V 1754 4172 50  0001 C CNN
-F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 1741 4288 50  0001 L CNN
-F 3 "" H 1850 4100 50  0000 C CNN
-	1    1650 4100
+P 2650 4200
+F 0 "W1" V 2650 4450 50  0000 C CNN
+F 1 "TEST_1P" V 2754 4272 50  0001 C CNN
+F 2 "wire_pads:SolderWirePad_single_1mmSMD" V 2741 4388 50  0001 L CNN
+F 3 "" H 2850 4200 50  0000 C CNN
+	1    2650 4200
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
@@ -996,36 +1029,36 @@ Wire Wire Line
 $Comp
 L devices:R_0603 R24
 U 1 1 5E341057
+P 5100 4700
+F 0 "R24" V 5050 4500 50  0000 C CNN
+F 1 "0R" V 5150 4850 50  0000 C CNN
+F 2 "resistors:R_0603" H 5100 4550 50  0001 C CNN
+F 3 "" H 5100 4700 50  0000 C CNN
+	1    5100 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L devices:R_0603 R23
+U 1 1 5E3420FD
 P 5100 4600
-F 0 "R24" V 5050 4400 50  0000 C CNN
+F 0 "R23" V 5050 4400 50  0000 C CNN
 F 1 "0R" V 5150 4750 50  0000 C CNN
 F 2 "resistors:R_0603" H 5100 4450 50  0001 C CNN
 F 3 "" H 5100 4600 50  0000 C CNN
 	1    5100 4600
 	0    1    1    0   
 $EndComp
-$Comp
-L devices:R_0603 R23
-U 1 1 5E3420FD
-P 5100 4500
-F 0 "R23" V 5050 4300 50  0000 C CNN
-F 1 "0R" V 5150 4650 50  0000 C CNN
-F 2 "resistors:R_0603" H 5100 4350 50  0001 C CNN
-F 3 "" H 5100 4500 50  0000 C CNN
-	1    5100 4500
-	0    1    1    0   
-$EndComp
+Wire Wire Line
+	5950 4700 5200 4700
 Wire Wire Line
 	5950 4600 5200 4600
 Wire Wire Line
-	5950 4500 5200 4500
-Wire Wire Line
-	3800 4500 5000 4500
-Wire Wire Line
 	3800 4600 5000 4600
-Text Label 5400 4500 0    50   ~ 0
-SDA
+Wire Wire Line
+	3800 4700 5000 4700
 Text Label 5400 4600 0    50   ~ 0
+SDA
+Text Label 5400 4700 0    50   ~ 0
 SCL
 $Comp
 L devices:Led_Small D5
@@ -1314,7 +1347,7 @@ LED_G
 Text Label 9100 5950 0    50   ~ 0
 LED_B
 Wire Wire Line
-	1450 4700 2300 4700
+	2450 4800 3300 4800
 $Comp
 L devices:LED_RGB D6
 U 1 1 5E34D3F1
@@ -1532,46 +1565,13 @@ Wire Wire Line
 Wire Wire Line
 	5700 6450 5700 6500
 Wire Wire Line
-	2300 5000 1650 5000
+	3300 5000 2650 5000
 Wire Wire Line
-	4750 4400 3800 4400
-Text Notes 2350 3600 0    50   ~ 0
+	4750 4500 3800 4500
+Text Notes 1200 5350 0    50   ~ 0
 Pin 1, 3, 5, 7, 17 and 19 \nare also connected to \nthe WiFi NINA module \non the Vidor 4000
 Wire Wire Line
-	3800 4300 4750 4300
+	3800 4400 4750 4400
 Wire Wire Line
-	2300 4600 1650 4600
-$Comp
-L MODULE_compute:ARDUINO_VIDOR_MPCIE CN1
-U 1 1 5E58A1BB
-P 3050 5400
-F 0 "CN1" H 3050 6925 50  0000 C CNN
-F 1 "TE_2041119-2" H 3050 6834 50  0000 C CNN
-F 2 "connectors_pci-express:MPCIe_4mm" H 2850 6650 50  0001 C CNN
-F 3 "" H 2850 6650 50  0001 C CNN
-	1    3050 5400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2100 4000 2100 6100
-Wire Wire Line
-	4000 4000 4000 4100
-Wire Wire Line
-	3800 4200 3900 4200
-Wire Wire Line
-	3900 4200 3900 5000
-Wire Wire Line
-	3800 4100 4000 4100
-Connection ~ 4000 4100
-Wire Wire Line
-	4000 4100 4000 5300
-Wire Wire Line
-	2300 4800 2200 4800
-Wire Wire Line
-	2300 4500 2200 4500
-Wire Wire Line
-	2200 4500 2200 4800
-Connection ~ 2200 4800
-Wire Wire Line
-	2200 4800 2200 5200
+	3300 4700 2650 4700
 $EndSCHEMATC
