@@ -1,17 +1,17 @@
 // test program for all the LEDs on the VidorCameraAdapter
 #include "VidorPeripherals.h"
-#define STARTDELAY 500
-#define FPGALEDRED 2
-#define FPGALEDGREEN 1
-#define FPGALEDBLUE 13
-#define FPGAI2CSDA 3
-#define FPGAI2CSCL 4
-#define FPGAVSYNC 7
-#define FPGAHREF 8
+const static int START_DELAY = 500;
+const static int FPGA_LED_RED_PIN = 2;
+const static int FPGA_LED_GREEN_PIN = 1;
+const static int FPGA_LED_BLUE_PIN = 13;
+const static int FPGA_I2C_SDA_PIN = 3;
+const static int FPGA_I2C_SCL_PIN = 4;
+const static int FPGA_VSYNC_PIN = 7;
+const static int FPGA_HREF_PIN = 8;
 
 void setup() {
   Serial.begin(115200);
-//  while (!Serial) {}
+  for(unsigned long const start = millis(); !Serial && (millis() - start) < 5000; ) {}  // wait for five seconds if Serial starts and then move on
   // Let's start by initializing the FPGA
   if (!FPGA.begin()) {
     Serial.println("Initialization failed!");
@@ -28,72 +28,72 @@ void setup() {
   FPGA.printConfig();
 
   // Set FGPA gpios
-  FPGA.pinMode(FPGAI2CSDA, OUTPUT);
-  FPGA.pinMode(FPGAI2CSCL, OUTPUT);
-  FPGA.pinMode(FPGAVSYNC, OUTPUT);
-  FPGA.pinMode(FPGAHREF, OUTPUT);
-  FPGA.pinMode(FPGALEDRED, OUTPUT);
-  FPGA.pinMode(FPGALEDGREEN, OUTPUT);
-  FPGA.pinMode(FPGALEDBLUE, OUTPUT);
-  FPGA.digitalWrite(FPGAI2CSDA, LOW);
-  FPGA.digitalWrite(FPGAI2CSCL, LOW);
-  FPGA.digitalWrite(FPGAVSYNC, LOW);
-  FPGA.digitalWrite(FPGAHREF, LOW);
-  FPGA.digitalWrite(FPGALEDRED, HIGH);
-  FPGA.digitalWrite(FPGALEDGREEN, HIGH);
-  FPGA.digitalWrite(FPGALEDBLUE, HIGH);
+  FPGA.pinMode(FPGA_I2C_SDA_PIN, OUTPUT);
+  FPGA.pinMode(FPGA_I2C_SCL_PIN, OUTPUT);
+  FPGA.pinMode(FPGA_VSYNC_PIN, OUTPUT);
+  FPGA.pinMode(FPGA_HREF_PIN, OUTPUT);
+  FPGA.pinMode(FPGA_LED_RED_PIN, OUTPUT);
+  FPGA.pinMode(FPGA_LED_GREEN_PIN, OUTPUT);
+  FPGA.pinMode(FPGA_LED_BLUE_PIN, OUTPUT);
+  FPGA.digitalWrite(FPGA_I2C_SDA_PIN, LOW);
+  FPGA.digitalWrite(FPGA_I2C_SCL_PIN, LOW);
+  FPGA.digitalWrite(FPGA_VSYNC_PIN, LOW);
+  FPGA.digitalWrite(FPGA_HREF_PIN, LOW);
+  FPGA.digitalWrite(FPGA_LED_RED_PIN, HIGH);
+  FPGA.digitalWrite(FPGA_LED_GREEN_PIN, HIGH);
+  FPGA.digitalWrite(FPGA_LED_BLUE_PIN, HIGH);
 }
 
 void setRGBLed (bool red, bool green, bool blue) {
-  if(red==true) FPGA.digitalWrite(FPGALEDRED, LOW);
-  else FPGA.digitalWrite(FPGALEDRED, HIGH);
-  if(green==true) FPGA.digitalWrite(FPGALEDGREEN, LOW);
-  else FPGA.digitalWrite(FPGALEDGREEN, HIGH);
-  if(blue==true) FPGA.digitalWrite(FPGALEDBLUE, LOW);
-  else FPGA.digitalWrite(FPGALEDBLUE, HIGH);
+  if(red==true) FPGA.digitalWrite(FPGA_LED_RED_PIN, LOW);
+  else FPGA.digitalWrite(FPGA_LED_RED_PIN, HIGH);
+  if(green==true) FPGA.digitalWrite(FPGA_LED_GREEN_PIN, LOW);
+  else FPGA.digitalWrite(FPGA_LED_GREEN_PIN, HIGH);
+  if(blue==true) FPGA.digitalWrite(FPGA_LED_BLUE_PIN, LOW);
+  else FPGA.digitalWrite(FPGA_LED_BLUE_PIN, HIGH);
 }
 
 void loop() {
   int i=0;
   // put your main code here, to run repeatedly:
-  FPGA.digitalWrite(FPGAI2CSDA, HIGH);  // activate LED on I2CSDA
-  delay(STARTDELAY);
-  FPGA.digitalWrite(FPGAI2CSDA, LOW);
-  FPGA.digitalWrite(FPGAI2CSCL, HIGH);  // activate LED on I2CSCL
-  delay(STARTDELAY);
-  FPGA.digitalWrite(FPGAI2CSCL, LOW);
-  FPGA.digitalWrite(FPGAVSYNC, HIGH);  // activate LED on VSYNC
-  delay(STARTDELAY);
-  FPGA.digitalWrite(FPGAVSYNC, LOW);
-  FPGA.digitalWrite(FPGAHREF, HIGH);  // activate LED on HSYNC
-  delay(STARTDELAY);
-  FPGA.digitalWrite(FPGAHREF, LOW);
+  FPGA.digitalWrite(FPGA_I2C_SDA_PIN, HIGH);  // activate LED on I2CSDA
+  delay(START_DELAY);
+  FPGA.digitalWrite(FPGA_I2C_SDA_PIN, LOW);
+  FPGA.digitalWrite(FPGA_I2C_SCL_PIN, HIGH);  // activate LED on I2CSCL
+  delay(START_DELAY);
+  FPGA.digitalWrite(FPGA_I2C_SCL_PIN, LOW);
+  FPGA.digitalWrite(FPGA_VSYNC_PIN, HIGH);  // activate LED on VSYNC
+  delay(START_DELAY);
+  FPGA.digitalWrite(FPGA_VSYNC_PIN, LOW);
+  FPGA.digitalWrite(FPGA_HREF_PIN, HIGH);  // activate LED on HSYNC
+  delay(START_DELAY);
+  FPGA.digitalWrite(FPGA_HREF_PIN, LOW);
 
   // now activate all LEDs of the RGB LED one after another
   setRGBLed(1,0,0);
-  delay(STARTDELAY);
+  delay(START_DELAY);
   setRGBLed(0,1,0);
-  delay(STARTDELAY);
+  delay(START_DELAY);
   setRGBLed(0,0,1);
-  delay(STARTDELAY);
+  delay(START_DELAY);
   setRGBLed(1,1,1);
-  delay(STARTDELAY);
+  delay(START_DELAY);
   setRGBLed(0,0,0);
-  delay(STARTDELAY);
+  delay(START_DELAY);
 
   for(i=0;i<3;i++)
   {
-    FPGA.digitalWrite(FPGAI2CSDA, HIGH);  // activate all LEDs
-    FPGA.digitalWrite(FPGAI2CSCL, HIGH);
-    FPGA.digitalWrite(FPGAVSYNC, HIGH);
-    FPGA.digitalWrite(FPGAHREF, HIGH);
+    FPGA.digitalWrite(FPGA_I2C_SDA_PIN, HIGH);  // activate all LEDs
+    FPGA.digitalWrite(FPGA_I2C_SCL_PIN, HIGH);
+    FPGA.digitalWrite(FPGA_VSYNC_PIN, HIGH);
+    FPGA.digitalWrite(FPGA_HREF_PIN, HIGH);
     setRGBLed(1,1,1);
-    delay(STARTDELAY);
-    FPGA.digitalWrite(FPGAI2CSDA, LOW);  // deactivate all LEDs
-    FPGA.digitalWrite(FPGAI2CSCL, LOW);
-    FPGA.digitalWrite(FPGAVSYNC, LOW);
-    FPGA.digitalWrite(FPGAHREF, LOW);
+    delay(START_DELAY);
+    FPGA.digitalWrite(FPGA_I2C_SDA_PIN, LOW);  // deactivate all LEDs
+    FPGA.digitalWrite(FPGA_I2C_SCL_PIN, LOW);
+    FPGA.digitalWrite(FPGA_VSYNC_PIN, LOW);
+    FPGA.digitalWrite(FPGA_HREF_PIN, LOW);
     setRGBLed(0,0,0);
-    delay(STARTDELAY);
+    delay(START_DELAY);
   }
 }
