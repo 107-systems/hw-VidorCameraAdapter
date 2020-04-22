@@ -26,6 +26,12 @@ matrix:
       - display_report
 
 
+  - name: 'Extra sketch checks'
+    language: minimal
+    script:
+      - check_sketch_structure "${TRAVIS_BUILD_DIR}/src"
+
+
 # default phase definitions
 before_install:
   # install arduino-ci-script
