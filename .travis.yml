@@ -1,0 +1,53 @@
+# This file is used to configure the Travis CI tests of this project
+
+env:
+  global:
+    # The Arduino IDE will be installed at APPLICATION_FOLDER/arduino
+    - APPLICATION_FOLDER="${HOME}/arduino-ci-script-application-folder"
+    - SKETCHBOOK_FOLDER="${HOME}/arduino-sketchbook"
+
+
+matrix:
+  include:
+  - name: "Compilation tests"
+    language: minimal
+    install:
+      # Install the Arduino IDE
+      - install_ide 'newest'
+      # Install Arduino SAMD Boards
+      - install_package 'arduino:samd'
+      # Install library dependencies
+      - install_library 'VidorPeripherals'
+    script:
+      # Compile all sketches under src
+      - build_sketch "${TRAVIS_BUILD_DIR}/src" 'arduino:samd:mkrvidor4000' 'false' 'newest'
+    after_script:
+      # Print a tab separated report of all sketch verification results to the log
+      - display_report
+
+
+# default phase definitions
+before_install:
+  # install arduino-ci-script
+  - git clone https://github.com/per1234/arduino-ci-script.git "${HOME}/scripts/arduino-ci-script"
+  - cd "${HOME}/scripts/arduino-ci-script"
+  # Get new tags from the remote
+  - git fetch --tags
+  # Checkout the latest tag
+  - git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
+  - source "${HOME}/scripts/arduino-ci-script/arduino-ci-script.sh"
+
+  # These functions can be used to get verbose output for debugging arduino-ci-script
+  # set_script_verbosity can be set to values from 0 - 2 (verbosity off - maximum verbosity)
+  #- set_script_verbosity 1
+  # Setting set_verbose_output_during_compilation to true is the same as File > Preferences > Show verbose output during > compilation (check) in the Arduino IDE
+  #- set_verbose_output_during_compilation "true"
+
+  - set_application_folder "$APPLICATION_FOLDER"
+  - set_sketchbook_folder "$SKETCHBOOK_FOLDER"
+
+
+notifications:
+  email:
+    on_success: always
+    on_failure: always
