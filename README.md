@@ -54,4 +54,3 @@ All GND pins are connected to the GND plane and all +3V3 pins are conntected to 
 ### Bot
 
 ![vidorcameraadapter PCB bot](docs/images/vidorcameraadapter_bot.png)
-
