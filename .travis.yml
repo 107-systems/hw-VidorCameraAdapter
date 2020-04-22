@@ -32,6 +32,18 @@ matrix:
       - check_sketch_structure "${TRAVIS_BUILD_DIR}/src"
 
 
+  - name: 'Spell check'
+    language: python
+    python: 3.8
+    # Define an empty before_install phase to override the default definition
+    before_install:
+    install:
+      # https://github.com/codespell-project/codespell
+      - pip install codespell
+    script:
+      - codespell --skip="*.step,${TRAVIS_BUILD_DIR}/.git,${TRAVIS_BUILD_DIR}/images,${TRAVIS_BUILD_DIR}/kicad_source" --ignore-words="${TRAVIS_BUILD_DIR}/etc/codespell-ignore-words-list.txt" "${TRAVIS_BUILD_DIR}"
+
+
 # default phase definitions
 before_install:
   # install arduino-ci-script
