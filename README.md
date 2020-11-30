@@ -2,7 +2,7 @@ VidorCameraAdapter
 ==================
 
 <p align="center">
-  <a href="https://github.com/107-systems/107-Arduino-Viper"><img src="viper-logo.jpg" width="40%"></a>
+  <a href="https://github.com/107-systems/107-Arduino-Viper"><img src="https://github.com/107-systems/.github/raw/main/viper-logo.jpg" width="40%"></a>
 </p>
 
 Adapter to connect a OV2640 camera module to the Mini PCIe connector of the Arduino MKR Vidor 4000.
